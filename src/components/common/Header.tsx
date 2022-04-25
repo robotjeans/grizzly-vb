@@ -7,30 +7,26 @@ const Header = ({ onOpen }: any) => {
   return (
     <header
       role="banner"
-      className="sticky top-0 left-0 right-0 z-30 transition-all duration-300 ease-in-out bg-white"
+      className="sticky top-0 left-0 right-0 z-30 transition-all duration-300 ease-in-out bg-white shadow-lg"
     >
+      <div className="relative flex items-center justify-center bg-red-600 h-[44px] mt-[-8px]">
+        <p className="text-white text-base">(757) 993 7283</p>
+      </div>
       <Container>
         <nav className="flex items-center justify-between h-[60px]">
           <Link passHref href="/">
             <Image
-              loader={() => '/images/logo.png'}
-              src="/images/logo.png"
+              loader={() => '/images/logo.svg'}
+              src="/images/logo.svg"
               alt="Grizzly Hauling Logo"
-              width={35}
-              height={35}
+              width={96}
+              height={48}
               className="cursor-pointer rounded"
             />
           </Link>
           <div className="flex items-baseline space-x-4"></div>
-          <div className="flex flex-row justify-center items-center w-28">
-            <Link href="/login">
-              <a className="uppercase text-xs font-medium p-[0 12px] mr-4 leading-[60px] text-slate-500">
-                login
-              </a>
-            </Link>
-            <Button onClick={onOpen} variant="inverse">
-              Register
-            </Button>
+          <div className="flex flex-row justify-center items-center min-w-28">
+            <Button variant="primary">Book Pickup</Button>
           </div>
         </nav>
       </Container>

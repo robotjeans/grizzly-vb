@@ -1,10 +1,13 @@
-import DefaultLayout from '@/components/ui/DefaultLayout';
 import { NextPage } from 'next';
+import SEO from '@/components/common/Seo';
+import DefaultLayout from '@/components/ui/DefaultLayout';
+import Hero from '@/components/home/Hero';
 
 const Home: NextPage = () => {
   return (
     <DefaultLayout>
-      <h3>Grizzly Hauling</h3>
+      <SEO />
+      <Hero />
     </DefaultLayout>
   );
 };

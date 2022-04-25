@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import Spinner from '@/components/common/Spinner';
 
 const variants = {
-  primary: 'bg-blue-600 text-white hover:bg-gray-50:text-blue-600',
-  inverse: 'bg-white text-blue-600 hover:bg-blue-600:text-white',
+  primary: 'bg-red-600 text-white hover:bg-gray-50 hover:text-red-600',
+  inverse: 'bg-white text-red-600 hover:bg-red-600 hover:text-white',
   danger: 'bg-red-600 text-white hover:bg-red-50:text-red-600',
 };
 
@@ -45,7 +45,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         type={type}
         className={clsx(
-          'flex max-h-10 justify-center items-center border border-gray-300 disabled:opacity-70 disabled:cursor-not-allowed rounded-md shadow-sm font-medium focus:outline-none',
+          'flex max-h-10 justify-center items-center border border-gray-300 disabled:opacity-70 disabled:cursor-not-allowed rounded-md shadow-sm font-medium focus:outline-none transition-all duration-300',
           variants[variant],
           sizes[size],
           className
