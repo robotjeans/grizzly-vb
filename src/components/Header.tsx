@@ -1,6 +1,5 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
-import Container from './Container';
 
 const Header: FunctionComponent = () => {
   return (

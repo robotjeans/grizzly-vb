@@ -6,7 +6,6 @@ import {
   faTwitter,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-import Container from '@/components/Container';
 
 type IconItemProp = {
   icon: IconProp;
@@ -26,7 +25,7 @@ export const FooterIconItem = (props: IconItemProp) => (
 const Footer = () => (
   <footer className="py-12 bg-neutral-800">
     <div className="border-b border-b-gray-500 pb-12">
-      <Container>
+      <div className="container">
         <div className="flex gap-x-4 justify-center">
           <FooterIconItem
             icon={faTwitter}
@@ -41,10 +40,10 @@ const Footer = () => (
             href="https://www.instagram.com/grizzlyhaulingvb"
           />
         </div>
-      </Container>
+      </div>
     </div>
     <div className="pt-8">
-      <Container>
+      <div className="container">
         <div className="flex flex-row items-center justify-center">
           <div className="flex gap-x-4 justify-center text-center text-gray-400">
             <span className="border-2 border-transparent hover:border-b-2 hover:border-gray-400  cursor-pointer pb-1">
@@ -56,7 +55,7 @@ const Footer = () => (
             <span>&copy;Grizzly Hauling 2022</span>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   </footer>
 );

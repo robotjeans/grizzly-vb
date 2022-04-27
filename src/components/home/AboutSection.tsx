@@ -2,13 +2,12 @@ import Image from 'next/image';
 import { FunctionComponent } from 'react';
 import { IconPackage } from '@tabler/icons';
 import Button from '@/components/common/Button';
-import Container from '@/components/common/Container';
 import Link from 'next/link';
 
 const AboutSection: FunctionComponent = () => {
   return (
     <section className="overflow-hidden py-12 bg-blue-dark">
-      <Container className="flex flex-col items-center 3xl:flex-row 3xl:justify-center">
+      <div className="container flex flex-col items-center 3xl:flex-row 3xl:justify-center">
         <div className="mb-4 text-center 2xl:mr-12 3xl:text-left">
           <IconPackage
             className="p-2 mx-auto mb-4 bg-blue-light-contrast rounded-xl 3xl:mx-0"
@@ -41,7 +40,7 @@ const AboutSection: FunctionComponent = () => {
           />
             */}
         </div>
-      </Container>
+      </div>
     </section>
   );
 };
