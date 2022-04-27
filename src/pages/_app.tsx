@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from "react";
-import type { AppProps } from "next/app";
-import "@/styles/global.css";
+import type { AppProps } from 'next/app';
+import '@/styles/grizzly.css';
 
-const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
-};
+const App = ({ Component, pageProps }: AppProps) => (
+  <Component {...pageProps} />
+);
 
-export default MyApp;
+export default App;
