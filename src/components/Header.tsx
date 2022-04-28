@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header: FunctionComponent = () => {
   return (
@@ -11,7 +12,14 @@ const Header: FunctionComponent = () => {
         <div className="mr-12 lg:justify-center md:flex">
           <div className="inline-flex items-center h-16 md:justify-between md:h-20">
             <Link href="/">
-              <a className="block w-32 contain">LOGO HERE</a>
+              <a className="block w-32 contain">
+                <Image
+                  src="/images/logo.svg"
+                  alt="Grizzly Hauling Logo"
+                  width={180}
+                  height={70}
+                />
+              </a>
             </Link>
           </div>
         </div>

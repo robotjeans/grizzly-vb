@@ -1,17 +1,17 @@
 import { NextPage } from 'next';
 import Layout from '@/components/Layout';
 import SEO from '@/components/SEO';
-import GrizzlyHero from '@/components/home/GrizzlyHero';
-import CustomerInsights from '@/components/home/CustomerInsights';
 import GuaranteeSection from '@/components/home/GuaranteeSection';
+import HeaderSection from '@/components/home/HeaderSection';
+import PartnerSection from '@/components/home/PartnerSection';
 
 const Home: NextPage = () => {
   return (
     <Layout>
       <SEO />
-      <GrizzlyHero />
+      <HeaderSection />
+      <PartnerSection />
       <GuaranteeSection />
-      <CustomerInsights />
     </Layout>
   );
 };

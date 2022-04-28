@@ -16,7 +16,7 @@ class AppDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body>
+        <body className="m-0 text-base text-gray-700 min-h-full bg-white">
           <Main />
           <NextScript />
         </body>

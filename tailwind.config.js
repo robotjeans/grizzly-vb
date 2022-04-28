@@ -17,7 +17,32 @@ module.exports = {
 
       xl: '1280px',
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        one: '1fr',
+        two: '1fr 1fr',
+      },
+      gridTemplateRows: {
+        zero: 'auto',
+        two: 'auto auto',
+      },
+      gridAutoColumns: {
+        zero: 'auto',
+        one: '1fr',
+      },
+      gridRowStart: {
+        'span-one': 'span 1',
+      },
+      gridRowEnd: {
+        'span-one': 'span 1',
+      },
+      gridColumnStart: {
+        'span-one': 'span 1',
+      },
+      gridColumnEnd: {
+        'span-one': 'span 1',
+      },
+    },
   },
   plugins: [],
 };
