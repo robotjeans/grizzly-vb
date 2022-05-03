@@ -1,8 +1,11 @@
 import type { AppProps } from 'next/app';
 import '@/styles/grizzly.css';
+import Layout from '@/components/Layout';
 
 const App = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
+  <Layout>
+    <Component {...pageProps} />
+  </Layout>
 );
 
 export default App;

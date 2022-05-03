@@ -1,12 +1,13 @@
 import { NextPage } from 'next';
-import Layout from '@/components/Layout';
 import SEO from '@/components/SEO';
+import HeaderSection from '@/components/contact/HeaderSection';
 
 const Contact: NextPage = () => {
   return (
-    <Layout>
+    <>
       <SEO />
-    </Layout>
+      <HeaderSection />
+    </>
   );
 };
 

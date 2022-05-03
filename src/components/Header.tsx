@@ -1,14 +1,38 @@
-import { FunctionComponent } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { FunctionComponent, useEffect, useState } from 'react';
 
 const Header: FunctionComponent = () => {
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  const handleScroll = () => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () =>
+        setScrolled(window.pageYOffset > 200)
+      );
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <header
       role="banner"
-      className="fixed top-0 left-0 z-50 w-full transition-all duration-200 ease-in-out bg-white"
+      className={`sticky left-0 top-0 right-0 transition-all duration-200 ease-in-out bg-transparent z-50 header lg:py-3 py-4 ${
+        scrolled ? 'bg-red-600' : ''
+      }`}
     >
-      <div className="flex justify-between w-full h-full px-6 lg:px-10">
+      <div className="flex items-center justify-between relative"></div>
+    </header>
+  );
+};
+
+export default Header;
+
+/**
+ * 
+ * <div className="flex justify-between w-full h-full px-6 lg:px-10">
         <div className="mr-12 lg:justify-center md:flex">
           <div className="inline-flex items-center h-16 md:justify-between md:h-20">
             <Link href="/">
@@ -72,8 +96,4 @@ const Header: FunctionComponent = () => {
           </button>
         </div>
       </div>
-    </header>
-  );
-};
-
-export default Header;
+ */

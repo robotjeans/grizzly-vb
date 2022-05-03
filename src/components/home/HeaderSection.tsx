@@ -10,7 +10,7 @@ const HeaderSection: FunctionComponent = () => {
       'absolute left-0 top-0 right-0 bottom-auto -z-[999] block h-[670px] items-start opacity-10 skew-x-[0deg] skew-y-[-5deg]',
   };
   return (
-    <section className="relative flex flex-row justify-center items-center">
+    <section className="relative flex flex-row justify-center items-center bg-red-600">
       <div className="container relative flex w-full flex-col justify-center items-center mt-[100px] mx-[35px] mb-[80px]">
         <div
           className={clsx(
@@ -19,11 +19,11 @@ const HeaderSection: FunctionComponent = () => {
           )}
         >
           <div className="block row-start-span-one row-end-span-one col-start-span-one col-end-span-one pl-0 pt-[100px]">
-            <h1 className="w-[482px] mt-0 mb-6 text-5xl font-bold">
-              <span className="text-black block">Grizzly</span>
-              <span className="text-red-600 block">Hauling</span>
+            <h1 className="w-[482px] mt-0 mb-6 text-7xl font-bold">
+              <span className="text-white block">Grizzly</span>
+              <span className="text-white block">Hauling</span>
             </h1>
-            <p className="w-[480px] mb-0 text-2xl">
+            <p className="w-[480px] mb-0 text-black text-2xl">
               Virginia Beach hauling & junk removal services. We do the heavy
               lifting, so you can focus on your latest project.
             </p>
@@ -59,7 +59,14 @@ const HeaderSection: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className={clsx('hero-bg', classes.hero_background)}></div>
+      <svg id="hero-wave" viewBox="0 0 1920 395">
+        <path
+          id="svg-wave"
+          fill="currentColor"
+          fillRule="evenodd"
+          d="M.45 362.016C344.64 244.726 409.171 241.258 938 290.5c528.828 49.242 833.56-59.446 989-300.5-.484 2.139-2.094 142.61-4.829 421.413L1.941 426C.026 382.178-.472 360.85.45 362.016z"
+        ></path>
+      </svg>
     </section>
   );
 };
